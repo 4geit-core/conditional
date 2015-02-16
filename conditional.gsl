@@ -1,0 +1,36 @@
+.template 0
+
+function global.conditional__if_else(antecedent, consequent, alternate)
+  return my.antecedent ?? my.consequent ? my.alternate
+endfunction
+
+function global.conditional__ifdef_else(antecedent, consequent, alternate)
+  return conditional__if_else(defined(my.antecedent), my.consequent, my.alternate)
+endfunction
+
+function global.conditional__if_else_empty(antecedent, consequent)
+  return conditional__if_else(my.antecedent, my.consequent, "")
+endfunction
+
+function global.conditional__ifdef_else_empty(antecedent, consequent)
+  return conditional__ifdef_else(my.antecedent, my.consequent, "")
+endfunction
+
+function global.conditional__is_default(value, fallback)
+  return conv.number(my.value ? my.fallback) = my.fallback
+endfunction
+
+function global.conditional__is_xml_true(value)
+  return ((my.value ? xml_false) = xml_true)
+endfunction
+
+function global.conditional__check_arg_missing(ctx, key, value)
+  if !defined(my.value)
+    error('arg "$(my.key:)" is missing', my.ctx)
+  endif
+endfunction
+
+conditional__xml_false = "false"
+conditional__xml_true = "true"
+
+.endtemplate

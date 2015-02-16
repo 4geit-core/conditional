@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<core name="conditional" version="0.1.0">
+  <function name="if_else"/>
+  <function name="ifdef_else"/>
+  <function name="if_else_empty"/>
+  <function name="ifdef_else_empty"/>
+  <function name="is_default"/>
+  <function name="is_xml_true"/>
+  <function name="check_arg_missing"/>
+
+  <variable name="xml_true"/>
+  <variable name="xml_false"/>
+</core>
