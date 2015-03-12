@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<core name="conditional" branch="master">
+<core name="conditional" branch="master" description="4i core library handling conditional functions">
   <function name="if_else"/>
   <function name="ifdef_else"/>
   <function name="if_else_empty"/>
